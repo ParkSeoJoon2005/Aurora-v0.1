@@ -16,7 +16,7 @@ A Telegram bot for managing your groups with a extras features with HunterxHunte
   </a>
 </p>
 
-### Click Below Image to Deploy
+### Click Below Image to Deploy To Heroku
 [![Deploy](https://telegra.ph/file/30d14c4802456022d5137.jpg)](https://heroku.com/deploy?template=https://github.com/Sur-vivor/CinderellaProBot.git)
 
 ### Configuration
