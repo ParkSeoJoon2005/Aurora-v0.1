@@ -17,7 +17,7 @@ A Telegram bot for managing your groups with a extras features
 </p>
 
 ### Click Below Image to Deploy To Heroku
-[![Deploy](https://telegra.ph/file/30d14c4802456022d5137.jpg)](https://heroku.com/deploy?template=https://github.com/Sur-vivor/CinderellaProBot.git)
+[![Deploy](https://telegra.ph/file/30d14c4802456022d5137.jpg)](https://heroku.com/deploy?template=https://github.com/parkseojoon2005/Aurora-v0.1.git)
 
 ### Configuration
 
