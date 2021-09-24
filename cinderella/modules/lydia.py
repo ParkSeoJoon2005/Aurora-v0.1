@@ -17,6 +17,7 @@ CoffeeHouseAPI = API(LYDIA_API)
 api_client = LydiaAI(CoffeeHouseAPI)
 
 
+
 @run_async
 def add_chat(bot: Bot, update: Update):
     global api_client
