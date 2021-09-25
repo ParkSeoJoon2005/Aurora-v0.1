@@ -28,21 +28,21 @@ from cinderella.modules.connection import connect_button
 
 PM_START_TEXT = """
 _Hello_ *{}*
-_My name is_ *{}*\n_A Powerful Telegram ProBot to Manage Your Groups,feel free to add to your groups!!_
+_My name is_ *{}*\n_A Powerful Anime Themed Telegram Group Manager to Manage Your Groups,feel free to add to your groups!!_
 _Maintained by_ [{}](tg://user?id={})
 """
 
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
+I'm a Astronomy Themed Group Management bot with a cool modules! Have a look at the following for an idea of some of \
 the things I can help you with.
 *Main* commands available:
- 💠 - /start: start the bot
- 💠 - /help: PM's you this message.
- 💠 - /help <module name>: PM's you info about that module.
- 💠 - /source: Information about my source.
- 💠 - /settings:
+♨️ - /start: start the bot
+♨️ - /help: PM's you this message.
+♨️ - /help <module name>: PM's you info about that module.
+♨️ - /source: Information about my Source Code 🎁.
+♨️ - /settings:
    🔹 - in PM: will send you your settings for all supported modules.
    🔹 - in a group: will redirect you to pm, with all that chat's settings.
 {}
@@ -58,7 +58,7 @@ def vercheck() -> str:
 
 
 SOURCE_STRING = """
-⚡I'm built in python3, using the python Telegram Bot library, and am fully opensource - you can find what makes me tick [here](https://github.com/Sur-vivor/CinderellaProBot)
+⚡I'm built in python3, using the Python Telegram Bot library, and am fully opensource - you can find what makes me tick [here](https://github.com/parkseojoon2005)
 ⚡You Can Clone Me [Here](https://heroku.com/deploy?template=https://github.com/parkseojoon2005/Aurora-v0.1.git)
 """
 
@@ -165,7 +165,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             send_start(bot, update)
     else:
         update.effective_message.reply_text("Heya,{} Here..\nHow can I help you? 🙂".format(bot.first_name),reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help".format(bot.username))]]))
+                                                [[InlineKeyboardButton(text="⚙Help",url="t.me/{}?start=help".format(bot.username))]]))
 
 def send_start(bot, update):
     #Try to remove old message
@@ -179,8 +179,8 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="Help",callback_data="help_back"),InlineKeyboardButton(text="Developer",url="https://t.me/Boy_Alone_In_universe")]]
-    keyboard += [[InlineKeyboardButton(text="Connect Group", callback_data="main_connect"),InlineKeyboardButton(text="Add Me",url="t.me/{}?startgroup=true".format(bot.username))]]
+    keyboard = [[InlineKeyboardButton(text="⚙ Help",callback_data="help_back"),InlineKeyboardButton(text="🎓Developer",url="https://t.me/Boy_Alone_In_universe")]]
+    keyboard += [[InlineKeyboardButton(text="☘️Connect Group", callback_data="main_connect"),InlineKeyboardButton(text="➕Add Me",url="t.me/{}?startgroup=true".format(bot.username))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
