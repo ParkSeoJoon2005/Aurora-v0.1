@@ -28,7 +28,7 @@ from cinderella.modules.connection import connect_button
 
 PM_START_TEXT = """
 _Hello_ *{}*
-_My name is_ *{}*\n_A Powerful Anime Themed Telegram Group Manager to Manage Your Groups,feel free to add to your groups!!_
+_My name is_ *{}*\n_A Powerful Astronomy  Themed Telegram Group Manager to Manage Your Groups,feel free to add to your groups!!_
 _Maintained by_ [{}](tg://user?id={})
 """
 
@@ -235,7 +235,7 @@ def help_button(bot: Bot, update: Update):
             query.message.reply_text(text=text,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton(text="🚶🏻‍♂️Back🚶🏻‍♂️", callback_data="help_back")]]))
+                                         [[InlineKeyboardButton(text="🔙Back", callback_data="help_back")]]))
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
@@ -281,7 +281,8 @@ def get_help(bot: Bot, update: Update):
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help".format(bot.username))],  
-                                                [InlineKeyboardButton(text="🛡Contact Creator",url="https://t.me/Surv_ivor")]]))
+                                                [InlineKeyboardButton(text="
+                                                                      Dveloper",url="https://t.me/Surv_ivor")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
